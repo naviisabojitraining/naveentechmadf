@@ -1,0 +1,9 @@
+{
+	"name": "Shared-Techm-training",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c6f0660e-51f0-420c-82ed-c2ef51865577",
+		"tenantId": "5591067b-d75d-4857-9ee9-c52ccabe3daf"
+	}
+}
