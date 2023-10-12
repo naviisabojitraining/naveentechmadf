@@ -1,0 +1,12 @@
+{
+	"name": "RDBMS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=devsqlservernaveen.centralindia.cloudapp.azure.com;initial catalog=AdventureWorks2019;user id=adf_user;trustservercertificate=True",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDNCNjE4RTM1LTg5RUYtNDI2Mi1CMkRCLTQ2OUU5NTYzNTE1NV9lMDIzZDliYS1kNjcxLTQ2MTgtODNiZC1lNWZhZTc3NDU2NTIiDQp9"
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"name": "TechM-Training",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a6e51211-ff81-4887-9820-67a10ac25b13",
+		"tenantId": "5591067b-d75d-4857-9ee9-c52ccabe3daf"
+	}
+}
