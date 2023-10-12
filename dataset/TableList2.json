@@ -1,0 +1,12 @@
+{
+	"name": "TableList2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RDBMS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}

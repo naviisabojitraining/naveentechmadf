@@ -1,5 +1,5 @@
 {
-	"name": "CopyPipeline_employee",
+	"name": "DatacopyPipeline_employee",
 	"properties": {
 		"activities": [
 			{
