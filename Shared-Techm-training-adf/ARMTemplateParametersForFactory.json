@@ -11,6 +11,12 @@
 		"ADLS_NAVEEN_accountKey": {
 			"value": ""
 		},
+		"ADLS_selfhosted_accountKey": {
+			"value": ""
+		},
+		"OnPrem_SQLSERVER__connectionString": {
+			"value": ""
+		},
 		"RDBMS_connectionString": {
 			"value": ""
 		},
@@ -18,6 +24,9 @@
 			"value": ""
 		},
 		"ADLS_NAVEEN_properties_typeProperties_url": {
+			"value": "https://naveensqldbstorage.dfs.core.windows.net/"
+		},
+		"ADLS_selfhosted_properties_typeProperties_url": {
 			"value": "https://naveensqldbstorage.dfs.core.windows.net/"
 		}
 	}

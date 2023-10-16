@@ -15,6 +15,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ADLS_NAVEEN'"
 		},
+		"ADLS_selfhosted_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ADLS_selfhosted'"
+		},
+		"OnPrem_SQLSERVER__connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'OnPrem_SQLSERVER_'"
+		},
 		"RDBMS_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'RDBMS'"
@@ -24,6 +32,10 @@
 			"metadata": "Secure string for 'connectionString' of 'sqlserver_dev'"
 		},
 		"ADLS_NAVEEN_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://naveensqldbstorage.dfs.core.windows.net/"
+		},
+		"ADLS_selfhosted_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://naveensqldbstorage.dfs.core.windows.net/"
 		},
@@ -66,12 +78,41 @@
 					"sqlserver_dev_connectionString": {
 						"value": "[parameters('sqlserver_dev_connectionString')]"
 					},
+					"ADLS_selfhosted_accountKey": {
+						"value": "[parameters('ADLS_selfhosted_accountKey')]"
+					},
+					"OnPrem_SQLSERVER__connectionString": {
+						"value": "[parameters('OnPrem_SQLSERVER__connectionString')]"
+					},
 					"ADLS_NAVEEN_properties_typeProperties_url": {
 						"value": "[parameters('ADLS_NAVEEN_properties_typeProperties_url')]"
+					},
+					"ADLS_selfhosted_properties_typeProperties_url": {
+						"value": "[parameters('ADLS_selfhosted_properties_typeProperties_url')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "Shared-Techm-training-adf_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'Shared-Techm-training-adf_ArmTemplate_0')]"
+			]
 		}
 	]
 }
