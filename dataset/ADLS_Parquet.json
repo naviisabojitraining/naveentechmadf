@@ -1,0 +1,19 @@
+{
+	"name": "ADLS_Parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS_selfhosted",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "input"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
