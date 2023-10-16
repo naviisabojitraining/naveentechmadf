@@ -581,8 +581,7 @@
 									"copyBehavior": "FlattenHierarchy"
 								},
 								"formatSettings": {
-									"type": "ParquetWriteSettings",
-									"maxRowsPerFile": 10
+									"type": "ParquetWriteSettings"
 								}
 							},
 							"enableStaging": false,
