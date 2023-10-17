@@ -1,0 +1,14 @@
+{
+	"name": "AZ_Keyvault",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://naveen-dev-keyvault-2023.vault.azure.net/",
+			"credential": {
+				"referenceName": "naveen_user",
+				"type": "CredentialReference"
+			}
+		}
+	}
+}
