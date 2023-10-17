@@ -19,6 +19,9 @@
 		},
 		"ADLS_NAVEEN_properties_typeProperties_url": {
 			"value": "https://naveensqldbstorage.dfs.core.windows.net/"
+		},
+		"AZ_KV_properties_typeProperties_baseUrl": {
+			"value": "https://naveen-dev-keyvault-2023.vault.azure.net/"
 		}
 	}
 }
