@@ -128,7 +128,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_qgi",
+						"referenceName": "DestinationDataset_input",
 						"type": "DatasetReference"
 					}
 				]
