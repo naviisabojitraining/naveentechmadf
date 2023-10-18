@@ -30,7 +30,7 @@
 			}
 		],
 		"parameters": {
-			"name": {
+			"input": {
 				"type": "string"
 			}
 		},
