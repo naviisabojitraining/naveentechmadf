@@ -1,0 +1,139 @@
+{
+	"name": "copydatafromDatabricks",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_data_from_databricks_to_ADF",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureDatabricksDeltaLakeSource",
+						"exportSettings": {
+							"type": "AzureDatabricksDeltaLakeExportCommand"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings",
+							"copyBehavior": "FlattenHierarchy"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".csv"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "c_custkey",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "c_custkey",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c_name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c_name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c_address",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c_address",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c_nationkey",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "c_nationkey",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c_phone",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c_phone",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c_acctbal",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "c_acctbal",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c_mktsegment",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c_mktsegment",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "c_comment",
+									"type": "String"
+								},
+								"sink": {
+									"name": "c_comment",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureDatabricksDeltaLakeDataset1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "CSVFilesTableName_databricks",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

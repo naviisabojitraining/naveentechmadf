@@ -1,0 +1,39 @@
+{
+	"name": "databricks",
+	"properties": {
+		"activities": [
+			{
+				"name": "Databricks_param",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/naveen.saboji2023@outlook.com/Myadfjob",
+					"baseParameters": {
+						"input": {
+							"value": "@pipeline().parameters.name",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "Naveen_Azuredatabricks",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"parameters": {
+			"name": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	}
+}
