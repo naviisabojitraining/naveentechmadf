@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"notebookPath": "/Users/naveen.saboji2023@outlook.com/Myadfjob",
 					"baseParameters": {
-						"name": {
+						"input": {
 							"value": "@pipeline().parameters.name",
 							"type": "Expression"
 						}
@@ -30,7 +30,7 @@
 			}
 		],
 		"parameters": {
-			"input": {
+			"name": {
 				"type": "string"
 			}
 		},
