@@ -24,7 +24,7 @@
 					"sink": {
 						"type": "DelimitedTextSink",
 						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings",
+							"type": "AzureBlobStorageWriteSettings",
 							"copyBehavior": "FlattenHierarchy"
 						},
 						"formatSettings": {
@@ -128,7 +128,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_input",
+						"referenceName": "CSVFilesTableName_databricks",
 						"type": "DatasetReference"
 					}
 				]
